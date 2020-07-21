@@ -1,4 +1,4 @@
-# &#10999; <span style="font-family:Trebuchet MS;">Hello, I'm [Garfield Lee][Homepage-Link]</span> &#11000;
+# &#10048; <span style="font-family:Trebuchet MS;">Hello, I'm [Garfield Lee][Homepage-Link]</span> &#10048;
 
 <p style="font-family:Georgia;">A Front-end engineer, female(transgender).</p>
 
