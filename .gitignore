@@ -148,4 +148,4 @@ Temporary Items
 # End of https://www.toptal.com/developers/gitignore/api/macos
 
 # Ignore dist/index.svg file
-!dist/index.svg
+!dist/profile.svg
