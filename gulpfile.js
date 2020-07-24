@@ -3,6 +3,10 @@
 const { src, dest, watch, series, parallel } = require('gulp')
 
 const del = require('del')
+const markdown = require('gulp-markdown')
+const replace = require('gulp-replace')
+const rename = require("gulp-rename")
+const browserSync = require('browser-sync').create()
 
 const { buildSass } = require('./config/sass')
 const { postCss, injectCss } = require('./config/css')
@@ -30,8 +34,35 @@ function destFile() {
     .pipe(dest('./dist'))
 }
 
+const destFileWatch = series(destFile, function browserSyncReload(done) {
+  browserSync.reload()
+  done()
+})
+
+function buildHtml() {
+  const indexFile = src('./README.md')
+
+  return indexFile
+    .pipe(markdown())
+    .pipe(replace('dist/', ''))
+    .pipe(rename('index.html'))
+    .pipe(dest('./dist'))
+}
+
 function develop() {
-  watch('src/**/*.(scss|svg)', series([cleanDist, destFile]))
+  browserSync.init({
+    server: {
+      baseDir: './dist'
+    }
+  })
+
+  watch('src/**/*.(scss|svg)', {
+    ignoreInitial: false
+  }, destFileWatch)
+
+  watch('README.md', {
+    ignoreInitial: false
+  }, buildHtml)
 }
 
 exports.build = series([cleanDist, destFile])
