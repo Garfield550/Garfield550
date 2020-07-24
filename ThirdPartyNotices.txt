@@ -1,0 +1,15 @@
+THIRD PARTY SOFTWARE NOTICES AND INFORMATION
+
+Do Not Translate or Localize
+
+_____
+
+sindresorhus / css-in-readme-like-wat
+
+https://github.com/sindresorhus/css-in-readme-like-wat
+
+_____
+
+Eric Porter / Slidey Nav
+
+https://codepen.io/EricPorter/pen/YzKrqMp
