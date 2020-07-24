@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "name": "github-profile-readme",
+  "version": "1.0.0",
+  "description": "Garfield Lee's GitHub profile readme.",
+  "main": "index.js",
+  "scripts": {
+    "develop": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Garfield550/Garfield550.git"
+  },
+  "keywords": [
+    "github-readme",
+    "github-profile-readme",
+    "profile-readme"
+  ],
+  "author": "Garfield Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Garfield550/Garfield550/issues"
+  },
+  "homepage": "https://github.com/Garfield550/Garfield550#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.5",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-inject": "^5.0.5",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-svgmin": "^3.0.0",
+    "postcss-sorting": "^5.0.1",
+    "sass": "^1.26.10"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
