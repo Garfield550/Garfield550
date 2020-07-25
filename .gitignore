@@ -146,6 +146,3 @@ Temporary Items
 .apdisk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
-
-# Ignore dist/index.svg file
-!dist/profile.svg
