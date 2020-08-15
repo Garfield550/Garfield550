@@ -4,21 +4,20 @@ const { src, dest, watch, series, parallel } = require('gulp')
 
 const del = require('del')
 const markdown = require('gulp-markdown')
-const replace = require('gulp-replace')
 const rename = require("gulp-rename")
 const browserSync = require('browser-sync').create()
 
 const { buildSass } = require('./config/sass')
 const { postCss, injectCss } = require('./config/css')
-const { minifySvg } = require('./config/svg')
+const { minifyHtml } = require('./config/minify')
+
+const destPath = './dist'
 
 function cleanDist() {
-  return del([
-    './dist/*'
-  ])
+  return del(destPath)
 }
 
-function destFile() {
+function destSvgFile() {
   const styleFile = src('./src/sass/index.scss')
   const targetFile = src('./src/profile.svg')
 
@@ -29,41 +28,57 @@ function destFile() {
     }))
 
   return targetFile
-    .pipe(minifySvg())
+    .pipe(minifyHtml())
     .pipe(injectCss(style))
-    .pipe(dest('./dist'))
+    .pipe(dest(destPath))
 }
 
-const destFileWatch = series(destFile, function browserSyncReload(done) {
+const destSvgFileWatch = series(destSvgFile, function browserSyncReload(done) {
   browserSync.reload()
   done()
 })
 
-function buildHtml() {
-  const indexFile = src('./README.md')
+function destMarkdownFile() {
+  const markdownFile = src('./src/README.md')
 
-  return indexFile
+  return markdownFile
+    .pipe(dest(destPath))
+}
+
+function copyOtherFile() {
+  const files = src([
+    './LICENSE',
+    './ThirdPartyNotices.txt'
+  ])
+
+  return files
+    .pipe(dest(destPath))
+}
+
+function buildHtml() {
+  const markdownFile = src('./src/README.md')
+
+  return markdownFile
     .pipe(markdown())
-    .pipe(replace('dist/', ''))
     .pipe(rename('index.html'))
-    .pipe(dest('./dist'))
+    .pipe(dest(destPath))
 }
 
 function develop() {
   browserSync.init({
     server: {
-      baseDir: './dist'
+      baseDir: destPath
     }
   })
 
   watch('src/**/*.(scss|svg)', {
     ignoreInitial: false
-  }, destFileWatch)
+  }, destSvgFileWatch)
 
-  watch('README.md', {
+  watch('src/README.md', {
     ignoreInitial: false
   }, buildHtml)
 }
 
-exports.build = series([cleanDist, destFile])
+exports.build = series([cleanDist, destSvgFile, destMarkdownFile, copyOtherFile])
 exports.default = develop

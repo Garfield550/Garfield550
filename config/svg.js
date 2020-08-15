@@ -1,13 +1,18 @@
 'use strict'
 
-const svgmin = require('gulp-svgmin')
+const inject = require('gulp-inject')
 
-function minifySvg() {
-  return svgmin({
-    plugins: [{
-      removeComments: false
-    }]
+/**
+ * @param {NodeJS.ReadableStream} source NodeJS.ReadableStream.
+ */
+function injectSvg(source) {
+  return inject(source, {
+    removeTags: true,
+    starttag: '<!-- inject:{{ext}} -->',
+    transform: function (_, file) {
+      return file.contents.toString('utf8')
+    }
   })
 }
 
-exports.minifySvg = minifySvg
+exports.injectSvg = injectSvg
