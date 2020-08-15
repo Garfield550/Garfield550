@@ -1,6 +1,13 @@
+$tabs-nav-list-padding-size: 10px;
+$tabs-nav-item-about-width: 111px;
+$tabs-nav-item-find-width: 99px;
+$tabs-nav-item-languages-width: 153px;
+$tabs-nav-item-tools-width: 106px;
+$tabs-nav-item-stats-width: 105px;
+
 :root {
   --container-height: 320px;
-  --container-height-max: 600px;
+  --container-height-max: 430px;
   --header-font-color: #ffffff;
   --header-font-family: "Trebuchet MS", system-ui, -apple-system;
   --header-font-size: 40px;
@@ -8,8 +15,11 @@
   --intro-font-color: #ffffff;
   --intro-font-family: "Trebuchet MS", system-ui, -apple-system;
   --intro-font-size: 24px;
+  --tabs-list-background-color: #f5f5f5;
+  --tabs-item-font-family: Arial, Helvetica, system-ui, -apple-system;
 }
 
+// #region Container
 .container {
   &-outside {
     width: 100%;
@@ -31,9 +41,79 @@
     background-size: 600% 400%;
     border-radius: 10px;
     box-sizing: border-box;
+    position: relative;
   }
 
-  &-about {
+  &-content {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  &-tabs {
+    margin-right: -50%;
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+// #endregion Container
+
+// #region Tab nav
+.tabs {
+  &-nav {
+    &-list {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: var(--tabs-list-background-color);
+      border: none;
+      border-radius: 160px;
+      list-style: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+      position: relative;
+    }
+    &-item {
+      display: inline-block;
+      color: #333333;
+      font-family: var(--tabs-item-font-family);
+      font-size: 18px;
+      border-radius: 160px;
+      padding-top: 9.5px;
+      padding-bottom: 9.5px;
+      padding-left: 32px;
+      padding-right: 32px;
+      border: none;
+      outline: none;
+      z-index: 2;
+    }
+    &-slider {
+      display: inline-block;
+      width: $tabs-nav-item-about-width;
+      height: 40px;
+      background-color: yellowgreen;
+      border-radius: 160px;
+      position: absolute;
+      left: 10;
+      z-index: 1;
+    }
+  }
+}
+// #endregion Tab nav
+
+// #region Content wrapper styles
+.content {
+  &-intro {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -42,7 +122,9 @@
     position: relative;
   }
 }
+// #endregion Content wrapper styles
 
+// #region Intro content
 @mixin header-base() {
   margin-top: 0;
   margin-bottom: 0;
@@ -87,12 +169,9 @@
     font-size: var(--intro-font-size);
     line-height: 1;
     opacity: 0;
-
-    & a {
-      color: inherit;
-    }
   }
 }
+// #endregion Intro content
 
 /* Animation */
 @keyframes gradientBackground {
@@ -182,6 +261,7 @@
 @keyframes hiddenIt {
   100% {
     visibility: hidden;
+    width: 0;
     height: 0;
   }
 }
@@ -191,6 +271,75 @@
     height: var(--container-height-max);
   }
 }
+
+@keyframes tabsMoveUp {
+  0% {
+    bottom: -60px;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: -30px;
+  }
+}
+
+// #region Slider move animation keyframes
+$slider-move-find-length: $tabs-nav-list-padding-size + $tabs-nav-item-about-width;
+@keyframes sliderMoveToFind {
+  0% {
+    left: $tabs-nav-list-padding-size;
+    width: $tabs-nav-item-about-width;
+  }
+
+  100% {
+    left: $slider-move-find-length;
+    width: $tabs-nav-item-find-width;
+  }
+}
+
+$slider-move-languages-length: $slider-move-find-length + $tabs-nav-item-find-width;
+@keyframes sliderMoveToLanguages {
+  0% {
+    left: $slider-move-find-length;
+    width: $tabs-nav-item-find-width;
+  }
+
+  100% {
+    left: $slider-move-languages-length;
+    width: $tabs-nav-item-languages-width;
+  }
+}
+
+$slider-move-tools-length: $slider-move-languages-length + $tabs-nav-item-languages-width;
+@keyframes sliderMoveToTools {
+  0% {
+    left: $slider-move-languages-length;
+    width: $tabs-nav-item-languages-width;
+  }
+
+  100% {
+    left: $slider-move-tools-length;
+    width: $tabs-nav-item-tools-width;
+  }
+}
+
+$slider-move-stats-length: $slider-move-tools-length + $tabs-nav-item-tools-width;
+@keyframes sliderMoveToStats {
+  0% {
+    left: $slider-move-tools-length;
+    width: $tabs-nav-item-tools-width;
+  }
+
+  100% {
+    left: $slider-move-stats-length;
+    width: $tabs-nav-item-stats-width;
+  }
+}
+// #endregion Sloder move animation keyframes
 
 .container {
   &-outside {
@@ -205,7 +354,30 @@
     animation: gradientBackground 10s ease infinite;
   }
 
-  &-about {
+  &-tabs {
+    animation-name: tabsMoveUp;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 9s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.tabs {
+  &-nav {
+    &-slider {
+      animation-name: sliderMoveToFind, sliderMoveToLanguages, sliderMoveToTools, sliderMoveToStats;
+      animation-duration: 0.4s;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1.15);
+      animation-delay: 10s, 10.8s, 11.6s, 12.4s;
+      animation-fill-mode: forwards;
+      // animation-iteration-count: infinite;
+    }
+  }
+}
+
+.content {
+  &-intro {
     animation-name: fadeOut, hiddenIt;
     animation-duration: 1s, 0.1s;
     animation-timing-function: linear;

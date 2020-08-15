@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" role="img" fill="none" viewBox="0 0 800 600" width="800" height="600" overflow="visible">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" fill="none" viewBox="0 0 800 460" width="800" height="460" overflow="hidden">
   <!--
     License: see LICENSE file;
     Copyright: Garfield Lee <https://github.com/Garfield550>;
@@ -14,25 +14,38 @@
       </style>
       <div class="container-outside">
         <div class="container-inside">
-          <div class="container-about">
-            <h1 class="header-hello">Hello,</h1>
-            <h1 class="header-name">I'm Garfield Lee</h1>
-            <div class="intro-container one">
-              <p class="intro-content">A Front-end engineer.</p>
+          <div class="container-content">
+            <div class="content-intro">
+              <h1 class="header-hello">Hello,</h1>
+              <h1 class="header-name">I'm Garfield Lee</h1>
+              <div class="intro-container one">
+                <p class="intro-content">A Front-end engineer.</p>
+              </div>
+              <div class="intro-container two">
+                <p class="intro-content">Female(transgender).</p>
+              </div>
+              <div class="intro-container three">
+                <p class="intro-content">Currently working on Taro and Taro UI.</p>
+              </div>
+              <div class="intro-container four">
+                <p class="intro-content">And many more...</p>
+              </div>
             </div>
-            <div class="intro-container two">
-              <p class="intro-content">Female(transgender).</p>
-            </div>
-            <div class="intro-container three">
-              <p class="intro-content">Currently working on <a href="https://github.com/NervJS/taro" target="_blank" rel="noreferrer">Taro</a> and <a href="https://github.com/NervJS/taro-ui" target="_blank" rel="noreferrer">Taro UI</a>.
-              </p>
-            </div>
-            <div class="intro-container four">
-              <p class="intro-content">And many more...</p>
+            <div class="content-about">
+
             </div>
           </div>
-          <div>
-            <p>Haha</p>
+          <div class="container-tabs">
+            <nav class="tabs-nav">
+              <ul class="tabs-nav-list">
+                <li class="tabs-nav-slider"></li>
+                <li class="tabs-nav-item">About</li>
+                <li class="tabs-nav-item">Find</li>
+                <li class="tabs-nav-item">Languages</li>
+                <li class="tabs-nav-item">Tools</li>
+                <li class="tabs-nav-item">Stats</li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
