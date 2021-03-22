@@ -23,6 +23,7 @@
 ![TypeScript Badge][TypeScript-Badge]
 ![CSharp Badge][CSharp-Badge]
 ![XAML Badge][XAML-Badge]
+![Swift Badge][Swift-Badge]
 
 ![Sass Badge][Sass-Badge]
 ![PostCSS Badge][PostCSS-Badge]
@@ -35,7 +36,7 @@
 
 ![Yarn Badge][Yarn-Badge]
 ![Webpack Badge][Webpack-Badge]
-![Rollup.js Badge][Rollup.js-Badge]
+<!-- ![Rollup.js Badge][Rollup.js-Badge] -->
 ![ESLint Badge][ESLint-Badge]
 ![Prettier Badge][Prettier-Badge]
 ![Babel Badge][Babel-Badge]
@@ -49,7 +50,7 @@
 ![VisualStudio Badge][VisualStudio-Badge]
 ![Xcode Badge][Xcode-Badge]
 ![Sketch Badge][Sketch-Badge]
-![InVision Badge][InVision-Badge]
+<!-- ![InVision Badge][InVision-Badge] -->
 
 ![MacOS Badge][MacOS-Badge]
 ![Windows Badge][Windows-Badge]
@@ -132,6 +133,8 @@
 [React-Badge]: https://img.shields.io/badge/-React-%2361DAFB?style=flat-square&logo=react&logoColor=white "React Badge"
 
 [Xcode-Badge]: https://img.shields.io/badge/-Xcode-%231575F9?style=flat-square&logo=xcode&logoColor=white "Xcode Badge"
+
+[Swift-Badge]: https://img.shields.io/badge/-Swift-%23FA7343?style=flat-square&logo=swift&logoColor=white "Swift Badge"
 
 [Gatsby-Badge]: https://img.shields.io/badge/-Gatsby-%23663399?style=flat-square&logo=gatsby&logoColor=white "Gatsby Badge"
 
