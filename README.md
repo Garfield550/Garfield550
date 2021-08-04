@@ -28,7 +28,6 @@
 ![Sass Badge][Sass-Badge]
 ![PostCSS Badge][PostCSS-Badge]
 ![Bootstrap Badge][Bootstrap-Badge]
-
 ![React Badge][React-Badge]
 ![Gatsby Badge][Gatsby-Badge]
 ![Node.js Badge][Node.js-Badge]
@@ -36,13 +35,13 @@
 
 ![Yarn Badge][Yarn-Badge]
 ![Webpack Badge][Webpack-Badge]
-<!-- ![Rollup.js Badge][Rollup.js-Badge] -->
 ![ESLint Badge][ESLint-Badge]
 ![Prettier Badge][Prettier-Badge]
 ![Babel Badge][Babel-Badge]
 ![Jest Badge][Jest-Badge]
 ![Storybook Badge][Storybook-Badge]
 ![GitHubActions Badge][GitHubActions-Badge]
+<!-- ![Rollup.js Badge][Rollup.js-Badge] -->
 
 ![Git Badge][Git-Badge]
 ![PowerShell Badge][PowerShell-Badge]
