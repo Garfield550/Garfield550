@@ -57,12 +57,8 @@
 ## <span style="font-family:Trebuchet MS;">My GitHub stats:</span>
 
 <!-- ![GitHub Readme Stats][ReadmeStats-Image] -->
-<!-- ![GitHub Streak][GitHubStreak-Image] -->
-<div style="display:flex;">
-  <img src="http://github-readme-streak-stats.herokuapp.com?user=Garfield550" width="500" alt="GitHub Streak Image" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Garfield550&layout=compact" width="350" alt="Top Langs" />
-</div>
-
+![GitHub Streak][GitHubStreak-Image]
+<!-- ![GitHub Top Lang][GitHubTopLangs-Image] -->
 
 <!-- #region Links -->
 [Homepage-Link]: https://550.moe "Homepage Link"
@@ -180,3 +176,4 @@
 
 [ReadmeStats-Image]: https://github-readme-stats.vercel.app/api?username=garfield550&show_icons=true&bg_color=ffffff "GitHub Readme Stats"
 [GitHubStreak-Image]: http://github-readme-streak-stats.herokuapp.com?user=Garfield550 "GitHub Streak Image"
+[GitHubTopLangs-Image]: https://github-readme-stats.vercel.app/api/top-langs/?username=Garfield550&layout=compact "GitHub Top Langs"
