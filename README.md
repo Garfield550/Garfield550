@@ -2,19 +2,19 @@
 
 <p style="font-family:Georgia;">A Front-end engineer, female(transgender).</p>
 
-## <span style="font-family:Trebuchet MS;">Where can find me?</span>
+<!-- ## <span style="font-family:Trebuchet MS;">Where can find me?</span> -->
 
-[![GitHub Badge][GitHub-Badge]][GitHub-Link]
-[![GitLab Badge][GitLab-Badge]][GitLab-Link]
-[![Bitbucket Badge][Bitbucket-Badge]][Bitbucket-Link]
-[![StackOverflow Badge][StackOverflow-Badge]][StackOverflow-Link]
-[![ACM Badge][ACM-Badge]][ACM-Link]
-[![Codewars Badge][Codewars-Badge]][Codewars-Link]
-[![CodePen Badge][CodePen-Badge]][CodePen-Link]
-[![NPM Badge][NPM-Badge]][NPM-Link]
-[![Dribbble Badge][Dribbble-Badge]][Dribbble-Link]
-[![Linkedin Badge][Linkedin-Badge]][Linkedin-Link]
-[![Reddit Badge][Reddit-Badge]][Reddit-Link]
+<!-- [![GitHub Badge][GitHub-Badge]][GitHub-Link] -->
+<!-- [![GitLab Badge][GitLab-Badge]][GitLab-Link] -->
+<!-- [![Bitbucket Badge][Bitbucket-Badge]][Bitbucket-Link] -->
+<!-- [![StackOverflow Badge][StackOverflow-Badge]][StackOverflow-Link] -->
+<!-- [![ACM Badge][ACM-Badge]][ACM-Link] -->
+<!-- [![Codewars Badge][Codewars-Badge]][Codewars-Link] -->
+<!-- [![CodePen Badge][CodePen-Badge]][CodePen-Link] -->
+<!-- [![NPM Badge][NPM-Badge]][NPM-Link] -->
+<!-- [![Dribbble Badge][Dribbble-Badge]][Dribbble-Link] -->
+<!-- [![Linkedin Badge][Linkedin-Badge]][Linkedin-Link] -->
+<!-- [![Reddit Badge][Reddit-Badge]][Reddit-Link] -->
 
 ## <span style="font-family:Trebuchet MS;">Languages and Tools:</span>
 
