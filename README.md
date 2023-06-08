@@ -51,7 +51,7 @@
 ![MacOS Badge][MacOS-Badge]
 ![Windows Badge][Windows-Badge]
 
-![GitHub Top Lang][GitHubTopLangs-Image]
+<!-- ![GitHub Top Lang][GitHubTopLangs-Image] -->
 
 ## <span style="font-family:Trebuchet MS;">My GitHub stats:</span>
 
@@ -128,4 +128,4 @@
 
 <!-- [ReadmeStats-Image]: https://github-readme-stats.vercel.app/api?username=garfield550&show_icons=true&bg_color=ffffff "GitHub Readme Stats" -->
 [GitHubStreak-Image]: https://streak-stats.demolab.com?user=Garfield550&hide_border=true "GitHub Streak Image"
-[GitHubTopLangs-Image]: https://github-readme-stats.vercel.app/api/top-langs/?username=Garfield550&langs_count=6&hide_border=true&layout=compact "GitHub Top Langs"
+<!-- [GitHubTopLangs-Image]: https://github-readme-stats.vercel.app/api/top-langs/?username=Garfield550&langs_count=6&hide_border=true&layout=compact "GitHub Top Langs" -->
